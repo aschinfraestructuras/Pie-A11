@@ -2,18 +2,18 @@
 const config = {
   title: 'Plan de Inspección y Ensayos (PIE)',
   tagline: 'Autovía A-11: Tramo Langa de Duero - Aranda de Duero (22,3 km)',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon-asch.ico',
 
   // URL do site
   url: 'https://pie-a11.vercel.app',
   baseUrl: '/',
 
-  // Info do GitHub
+  // Info do GitHub - mantida mas sem exibição na UI
   organizationName: 'aschinfraestructuras',
   projectName: 'Pie-A11',
 
   // Configuração crucial para evitar erro de build
-  onBrokenLinks: 'warn',  // Mudado de 'throw' para 'warn'
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Configuração de idioma
@@ -29,7 +29,7 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/',
+          routeBasePath: '/docs', // Mantém o caminho /docs/
         },
         blog: false,
         theme: {
@@ -41,28 +41,28 @@ const config = {
 
   // Configuração do tema
   themeConfig: {
+    // Aumenta a claridade e simplicidade
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+    },
     navbar: {
       title: 'PIE Autovía A-11',
       logo: {
-        alt: 'Logo PIE',
-        src: 'img/logo.svg',
+        alt: 'Logo ASCH',
+        src: 'img/logo-asch.png', // Alterado para usar o logo da ASCH
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
+          // Alterado para direcionar para a página de introdução que funciona
+          to: '/docs/introduccion',
           label: 'Documentación',
+          position: 'left',
         },
         {
           to: '/descargas',
           label: 'Descargas',
           position: 'left',
-        },
-        {
-          href: 'https://github.com/aschinfraestructuras/Pie-A11',
-          label: 'GitHub',
-          position: 'right',
         },
       ],
     },
@@ -74,20 +74,20 @@ const config = {
           items: [
             {
               label: 'Introducción',
-              to: '/introduccion',
+              to: '/docs/introduccion',
             },
             {
               label: 'Índice General',
-              to: '/',
+              to: '/docs/introduccion', // Também atualizado para a introdução
             },
           ],
         },
         {
           title: 'Enlaces',
           items: [
+            // UTE OHL-ASCH convertido em texto sem link
             {
-              label: 'UTE OHL-ASCH',
-              href: '#',
+              html: 'UTE OHL-ASCH',
             },
             {
               label: 'Ministerio de Transportes',
@@ -97,6 +97,12 @@ const config = {
         },
       ],
       copyright: 'Copyright © ' + new Date().getFullYear() + ' UTE Obrascón Huarte Laín - ASCH Infraestructuras y Servicios',
+    },
+    // Melhorias visuais
+    metadata: [{name: 'keywords', content: 'plan, inspeccion, ensayos, autovia, A-11, calidad, obra civil'}],
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 4,
     },
   },
 };
