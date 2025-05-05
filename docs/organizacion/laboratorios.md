@@ -1,9 +1,3 @@
-## 7. docs/organizacion/laboratorios.md
-
-```md
----
-sidebar_position: 3
----
 
 # 4.3. LABORATORIOS Y ACREDITACIONES
 
