@@ -1,0 +1,69 @@
+/**
+ * Any CSS included here will be global.
+ */
+
+ :root {
+  --ifm-color-primary: #2e5288;
+  --ifm-color-primary-dark: #294b7a;
+  --ifm-color-primary-darker: #274673;
+  --ifm-color-primary-darkest: #203a5f;
+  --ifm-color-primary-light: #335996;
+  --ifm-color-primary-lighter: #355e9d;
+  --ifm-color-primary-lightest: #3c6ab1;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #4e89e8;
+  --ifm-color-primary-dark: #337be4;
+  --ifm-color-primary-darker: #2373e2;
+  --ifm-color-primary-darkest: #175ec1;
+  --ifm-color-primary-light: #6997ec;
+  --ifm-color-primary-lighter: #79a3ee;
+  --ifm-color-primary-lightest: #a3bef4;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para botões de download */
+.download-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border-radius: 4px;
+  margin: 10px 0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.download-button:hover {
+  background-color: var(--ifm-color-primary-darker);
+  text-decoration: none;
+  color: white;
+}
+
+/* Tabelas de ensaios */
+.tabla-ensayos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.tabla-ensayos th,
+.tabla-ensayos td {
+  padding: 10px;
+  border: 1px solid var(--ifm-table-border-color);
+  text-align: left;
+}
+
+.tabla-ensayos th {
+  background-color: var(--ifm-table-head-background);
+  font-weight: bold;
+}
+
+.tabla-ensayos tr:nth-child(even) {
+  background-color: var(--ifm-table-stripe-background);
+}
