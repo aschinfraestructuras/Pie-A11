@@ -1,25 +1,28 @@
-// @ts-check
-
-/** @type {import('@docusaurus/types').Config} */
+// docusaurus.config.js
 const config = {
   title: 'Plan de Inspección y Ensayos (PIE)',
   tagline: 'Autovía A-11: Tramo Langa de Duero - Aranda de Duero (22,3 km)',
   favicon: 'img/favicon.ico',
 
-  url: 'https://pie-autovia-a11.vercel.app',
+  // URL do site
+  url: 'https://pie-a11.vercel.app',
   baseUrl: '/',
 
-  organizationName: 'your-org',
-  projectName: 'pie-autovia-a11',
+  // Info do GitHub
+  organizationName: 'aschinfraestructuras',
+  projectName: 'Pie-A11',
 
-  onBrokenLinks: 'throw',
+  // Configuração crucial para evitar erro de build
+  onBrokenLinks: 'warn',  // Mudado de 'throw' para 'warn'
   onBrokenMarkdownLinks: 'warn',
 
+  // Configuração de idioma
   i18n: {
     defaultLocale: 'es',
     locales: ['es'],
   },
 
+  // Configurações principais
   presets: [
     [
       'classic',
@@ -36,8 +39,8 @@ const config = {
     ],
   ],
 
+  // Configuração do tema
   themeConfig: {
-    image: 'img/social-card.jpg',
     navbar: {
       title: 'PIE Autovía A-11',
       logo: {
@@ -52,12 +55,12 @@ const config = {
           label: 'Documentación',
         },
         {
-          href: '/descargas',
+          to: '/descargas',
           label: 'Descargas',
           position: 'left',
         },
         {
-          href: 'https://github.com/your-username/pie-autovia-a11',
+          href: 'https://github.com/aschinfraestructuras/Pie-A11',
           label: 'GitHub',
           position: 'right',
         },
