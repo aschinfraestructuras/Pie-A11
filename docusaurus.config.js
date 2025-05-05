@@ -29,7 +29,7 @@ const config = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          routeBasePath: '/docs', // Mantém o caminho /docs/
+          routeBasePath: '/docs', // Ajustado para evitar conflitos de rota
         },
         blog: false,
         theme: {
@@ -54,13 +54,12 @@ const config = {
       },
       items: [
         {
-          // Alterado para direcionar para a página de introdução que funciona
-          to: '/docs/introduccion',
+          to: '/docs/introduccion', // Direciona para a introdução
           label: 'Documentación',
           position: 'left',
         },
         {
-          to: '/descargas',
+          to: '/docs/descargas', // Atualizado para refletir a nova estrutura
           label: 'Descargas',
           position: 'left',
         },
@@ -78,7 +77,7 @@ const config = {
             },
             {
               label: 'Índice General',
-              to: '/docs/introduccion', // Também atualizado para a introdução
+              to: '/docs/index', // Mantido para consistência
             },
           ],
         },
